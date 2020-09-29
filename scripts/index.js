@@ -10,17 +10,12 @@ function ajustarImagen() {
     } else {
         aside.children[0].setAttribute("src", "./images/hero-desktop.jpg");
         main.insertBefore(aside, main.children[0].nextSibling);
-        ajustarIconoEscritorio();
+        //ajustarIconoEscritorio();
     }
 }
 
 window.onload = () => {
-    icon.style.position = "absolute";
-    if(window.innerWidth < 800) {
-        ajustarImagen();
-    } else {
-        ajustarIconoEscritorio();
-    }
+    ajustarImagen();
     document.getElementsByTagName("body")[0].style.opacity = 1;
 }
 
@@ -29,7 +24,6 @@ window.onresize = () => {
 }
 
 function ajustarIconoEscritorio() {
-    icon.classList.remove("error_icon");
     let button = document.getElementsByTagName("button")[0];
     let rect = button.getBoundingClientRect();
     icon.style.left = rect.left - 35 + "px"

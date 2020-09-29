@@ -86,7 +86,7 @@ button {
     border-width: 0;
     width: 65pt;
     background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-    margin-left: -40pt;
+    margin-left: 10pt;
 }
 
 button:hover {
@@ -97,9 +97,10 @@ button:hover {
 }
 
 .error_icon {
+    position: relative !important;
     display: flex;
     align-items: center;
-    margin-left: 0;
+    margin-left: -80pt;
 }
 
 aside img {
@@ -180,12 +181,8 @@ aside {
     }
     button {
         width: 50pt;
-        margin-left: 10px;
     }
     .error_icon {
-        position: relative !important;
-        display: flex;
-        align-items: center;
-        margin-left: -80px;
+        margin-left: -60pt;
     }
 }
