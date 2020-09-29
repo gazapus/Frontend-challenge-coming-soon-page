@@ -2,64 +2,68 @@ body {
     margin: 0;
     padding: 0%;
     width: 100%;
+    overflow-x: hidden;
+    opacity: 0;
 }
+
 main {
     margin: 0;
     display: flex;
     width: 100%;
     background-color: #FFFDFD;
+}
 
+#mainContainer {
+    padding-left: 15vw;
+    padding-right: 15vw;
 }
 
 header {
-    padding-top: 45pt;
-    padding-bottom: 25pt;
-    padding-left: 150pt;  
+    padding-top: 8vh;
+    padding-bottom: 3vh;
 }
 
 section {
-    padding-top: 30pt;
-    padding-right: 150pt;
-    padding-left: 150pt;  
+    padding-top: 7vh;
     font-family: 'Josefin Sans', sans-serif;
 }
 
-section h1 {
+h1 {
     font-weight: 600;
     font-size: 4.5em;
     letter-spacing: 10pt;
-    color:#413A3A;
+    color: #413A3A;
     margin-bottom: 10pt;
 }
 
-section h1 span {
+h1 span {
     color: hsl(0, 36%, 70%);
     font-weight: 300 !important;
 }
 
-section p{
+p {
     font-weight: 400;
     font-size: 16px;
     color: hsl(0, 93%, 68%);
     line-height: 20pt;
 }
 
-section form {
-    padding-top: 30pt;
+form {
+    padding-top: 5vh;
     width: 100%;
 }
 
-form label {
+label {
     display: flex;
     width: 100%;
-    height: 35pt;
+    height: 40pt;
 }
 
-label input {
-    width: 100%;
-    max-width: 300pt;
+input {
+    width: 300pt;
+    max-width: 80%;
     border-radius: 20pt;
-    border-color: rgb(156, 156, 156);;
+    border-color: rgb(156, 156, 156);
     border-style: solid;
     border-width: 1pt;
     text-indent: 15pt;
@@ -68,39 +72,37 @@ label input {
     font-size: 16px;
 }
 
-label input::placeholder {
+input::placeholder {
     color: rgb(156, 156, 156);
-  
 }
 
-label input:focus, label button:focus{
+input:focus, label button:focus {
     outline: none;
 }
 
-label button {
+button {
     border-radius: 20pt;
     border-style: solid;
     border-width: 0;
     width: 65pt;
     background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-    margin-left: -30pt;
+    margin-left: -40pt;
 }
 
-label button:hover {
+button:hover {
     transition-property: all;
     transition-duration: 1s;
-    background: linear-gradient(135deg, hsl(0, 100%, 96%),  hsl(0, 80%, 86%));
+    background: linear-gradient(135deg, hsl(0, 100%, 96%), hsl(0, 80%, 86%));
     cursor: pointer;
 }
 
-label div {
+.error_icon {
     display: flex;
-    height: 100%;
     align-items: center;
-    margin-left: -95pt;
+    margin-left: 0;
 }
 
-aside img{
+aside img {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -108,19 +110,82 @@ aside img{
 
 aside {
     height: 100vh;
-    background-color: #58bb31;
     margin: 0 !important;
     padding: 0 !important;
 }
 
-@media (max-width: 800px){
-    aside img{
+@media (min-width: 1250px) and (max-width: 1400px) {
+    #mainContainer {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1250px) {
+    #mainContainer {
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+}
+
+@media (max-width: 800px) {
+    aside img {
         height: auto;
         width: 100%;
     }
     aside {
         height: auto;
         width: 100vw;
-
+    }
+    #mainContainer {
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 15vw;
+    }
+    header {
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+        padding-left: 10vw;
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    section {
+        padding-top: 3vh;
+    }
+    h1 {
+        font-size: 3.5em;
+    }
+    p {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+    label {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+    input {
+        margin: 0;
+        padding: 0;
+        width: 75%;
+    }
+    button {
+        width: 50pt;
+        margin-left: 10px;
+    }
+    .error_icon {
+        position: relative !important;
+        display: flex;
+        align-items: center;
+        margin-left: -80px;
     }
 }
