@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0%;
+    width: 100%;
+}
+main {
+    margin: 0;
+    display: flex;
+    width: 100%;
+    background-color: #FFFDFD;
+
+}
+
+header {
+    padding-top: 45pt;
+    padding-bottom: 25pt;
+    padding-left: 150pt;  
+}
+
+section {
+    padding-top: 30pt;
+    padding-right: 150pt;
+    padding-left: 150pt;  
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+section h1 {
+    font-weight: 600;
+    font-size: 4.5em;
+    letter-spacing: 10pt;
+    color:#413A3A;
+    margin-bottom: 10pt;
+}
+
+section h1 span {
+    color: hsl(0, 36%, 70%);
+    font-weight: 300 !important;
+}
+
+section p{
+    font-weight: 400;
+    font-size: 16px;
+    color: hsl(0, 93%, 68%);
+    line-height: 20pt;
+}
+
+section form {
+    padding-top: 30pt;
+    width: 100%;
+}
+
+form label {
+    display: flex;
+    width: 100%;
+    height: 35pt;
+}
+
+label input {
+    width: 100%;
+    max-width: 300pt;
+    border-radius: 20pt;
+    border-color: rgb(156, 156, 156);;
+    border-style: solid;
+    border-width: 1pt;
+    text-indent: 15pt;
+    font-family: 'Josefin Sans', sans-serif;
+    color: rgb(34, 34, 34);
+    font-size: 16px;
+}
+
+label input::placeholder {
+    color: rgb(156, 156, 156);
+  
+}
+
+label input:focus, label button:focus{
+    outline: none;
+}
+
+label button {
+    border-radius: 20pt;
+    border-style: solid;
+    border-width: 0;
+    width: 65pt;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    margin-left: -30pt;
+}
+
+label button:hover {
+    transition-property: all;
+    transition-duration: 1s;
+    background: linear-gradient(135deg, hsl(0, 100%, 96%),  hsl(0, 80%, 86%));
+    cursor: pointer;
+}
+
+label div {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-left: -95pt;
+}
+
+aside img{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+aside {
+    height: 100vh;
+    background-color: #58bb31;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+@media (max-width: 800px){
+    aside img{
+        height: auto;
+        width: 100%;
+    }
+    aside {
+        height: auto;
+        width: 100vw;
+
+    }
+}
