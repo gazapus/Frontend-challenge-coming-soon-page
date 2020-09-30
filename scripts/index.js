@@ -28,10 +28,15 @@ function positionImage() {
  * Get the validated email input, clear the errors alerts and show the success message 
  * */
 function sendMail() {
-    emailInput.value = "";
-    hide(errorAlerts[0]);
-    hide(errorAlerts[1]);
-    show(success_message);
+    if(emailInput.value === "") {
+        show(errorAlerts[0]);
+        show(errorAlerts[1]);
+    } else {
+        emailInput.value = "";
+        hide(errorAlerts[0]);
+        hide(errorAlerts[1]);
+        show(success_message);
+    }
 }
 
 window.onload = () => {
