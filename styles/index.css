@@ -4,7 +4,7 @@ body {
     width: 100%;
     overflow-x: hidden;
     display: flex;
-    background: linear-gradient(135deg,rgb(248,240,239),rgb(255,246,247));
+    background: linear-gradient(45deg,rgb(255,243,243),rgb(253, 249, 250));
 }
 
 main {
@@ -18,13 +18,13 @@ header {
 }
 
 section {
-    padding-top: 7vh;
+    padding-top: 7.3vh;
     font-family: 'Josefin Sans', sans-serif;
 }
 
 h1 {
     font-weight: 600;
-    font-size: 4.2em;
+    font-size: 4.1em;
     letter-spacing: 10pt;
     color: #413A3A;
     margin-bottom: 10pt;
@@ -43,7 +43,7 @@ p {
 }
 
 form {
-    padding-top: 4vh;
+    padding-top: 4.2vh;
     width: 100%;
 }
 
@@ -57,10 +57,10 @@ input {
     width: 300pt;
     max-width: 90%;
     border-radius: 20pt;
-    border-color: rgb(156, 156, 156);
+    border-color: rgb(172, 171, 171);
     border-style: solid;
     border-width: 1pt;
-    text-indent: 15pt;
+    text-indent: 17pt;
     font-family: 'Josefin Sans', sans-serif;
     color: rgb(34, 34, 34);
     font-size: 16px;
@@ -68,7 +68,7 @@ input {
 }
 
 input::placeholder {
-    color: rgb(156, 156, 156);
+    color: rgb(172, 171, 171);
 }
 
 input:focus, label button:focus {
