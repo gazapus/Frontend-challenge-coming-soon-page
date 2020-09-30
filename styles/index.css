@@ -4,17 +4,17 @@ body {
     width: 100%;
     overflow-x: hidden;
     display: flex;
-    background-color: #FFFDFD;
+    background: linear-gradient(135deg,rgb(248,240,239),rgb(255,246,247));
 }
 
 main {
-    padding-left: 15vw;
+    padding-left: 13vw;
     padding-right: 15vw;
 }
 
 header {
     padding-top: 8vh;
-    padding-bottom: 2.5vh;
+    padding-bottom: 2.3vh;
 }
 
 section {
@@ -24,7 +24,7 @@ section {
 
 h1 {
     font-weight: 600;
-    font-size: 4.5em;
+    font-size: 4.4em;
     letter-spacing: 10pt;
     color: #413A3A;
     margin-bottom: 10pt;
@@ -43,7 +43,7 @@ p {
 }
 
 form {
-    padding-top: 5vh;
+    padding-top: 4vh;
     width: 100%;
 }
 
@@ -55,7 +55,7 @@ label {
 
 input {
     width: 300pt;
-    max-width: 80%;
+    max-width: 90%;
     border-radius: 20pt;
     border-color: rgb(156, 156, 156);
     border-style: solid;
@@ -82,7 +82,7 @@ button {
     border-radius: 20pt;
     border-style: solid;
     border-width: 0;
-    width: 65pt;
+    width: 67pt;
     background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     margin-left: 10pt;
 }
@@ -132,7 +132,7 @@ img {
 
 @media (min-width: 1250px) and (max-width: 1400px) {
     main {
-        padding-left: 10vw;
+        padding-left: 9vw;
         padding-right: 10vw;
     }
 }
