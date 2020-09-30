@@ -10,7 +10,6 @@ body {
 main {
     padding-left: 15vw;
     padding-right: 15vw;
-   
 }
 
 header {
@@ -196,5 +195,4 @@ img {
     #error_message {
         margin-left: -7pt;
     }
-
 }
