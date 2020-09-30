@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">  
 </head>
 
-<body>
+<body class="hidden">
   <main>
     <div id="mainContainer">
       <header>
@@ -39,7 +39,7 @@
           Hello fellow shoppers! We're currently building our new fashion store.
           Add your email below to stay up-to-date with announcements and our launch deals.
         </p>
-        <form action="#" onsubmit="enviarEmail(); return false">
+        <form action="#" onsubmit="sendMail(); return false">
           <label>
             <input type="email" placeholder="Email Address" />
             <div id="error_icon" class="error_icon error_flag hidden">

@@ -1,41 +1,42 @@
-var aside = document.getElementsByTagName("aside")[0];
-var container = document.getElementById("mainContainer");
-var main = document.getElementsByTagName("main")[0];
 var emailInput = document.getElementsByTagName("input")[0];
-let errorAlert = document.getElementsByClassName("error_flag");
+let errorAlerts = document.getElementsByClassName("error_flag");    // icon and message of error on input email
+let success_message = document.getElementById("success_message");   // success message of input email
 
-function ajustarImagen() {
+function positionImage() {
+    var aside = document.getElementsByTagName("aside")[0];
     if (window.innerWidth < 800) {
+        var container = document.getElementById("mainContainer");
         aside.children[0].setAttribute("src", "./images/hero-mobile.jpg");
         container.insertBefore(aside, container.children[1]);
     } else {
+        var main = document.getElementsByTagName("main")[0];
         aside.children[0].setAttribute("src", "./images/hero-desktop.jpg");
         main.insertBefore(aside, main.children[0].nextSibling);
     }
 }
 
+function sendMail() {
+    emailInput.value = "";
+    errorAlerts[0].classList.add("hidden");
+    errorAlerts[1].classList.add("hidden");
+    success_message.classList.remove("hidden");
+}
+
 window.onload = () => {
-    ajustarImagen();
-    document.getElementsByTagName("body")[0].style.opacity = 1;
+    positionImage();
+    document.getElementsByTagName("body")[0].classList.remove("hidden");
 }
 
 window.onresize = () => {
-    ajustarImagen();
+    positionImage();
 }
 
 emailInput.oninvalid = (e) => {
     e.preventDefault();
-    errorAlert[0].classList.remove("hidden")
-    errorAlert[1].classList.remove("hidden")
+    errorAlerts[0].classList.remove("hidden")
+    errorAlerts[1].classList.remove("hidden")
 }
 
 emailInput.oninput = () => {
-    document.getElementById("success_message").classList.add("hidden")
-}
-
-function enviarEmail() {
-    emailInput.value = "";
-    errorAlert[0].classList.add("hidden");
-    errorAlert[1].classList.add("hidden");
-    document.getElementById("success_message").classList.remove("hidden")
+    success_message.classList.add("hidden")
 }
