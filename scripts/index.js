@@ -3,15 +3,15 @@ let errorAlerts = document.getElementsByClassName("error_flag");    // icon and 
 let success_message = document.getElementById("success_message");   // success message of input email
 
 function positionImage() {
-    var aside = document.getElementsByTagName("aside")[0];
+    var img = document.getElementsByTagName("img")[0];
     if (window.innerWidth < 800) {
         var container = document.getElementById("mainContainer");
-        aside.children[0].setAttribute("src", "./images/hero-mobile.jpg");
-        container.insertBefore(aside, container.children[1]);
+        img.setAttribute("src", "./images/hero-mobile.jpg");
+        container.insertBefore(img, container.children[1]);
     } else {
         var main = document.getElementsByTagName("main")[0];
-        aside.children[0].setAttribute("src", "./images/hero-desktop.jpg");
-        main.insertBefore(aside, main.children[0].nextSibling);
+        img.setAttribute("src", "./images/hero-desktop.jpg");
+        main.insertBefore(img, main.children[0].nextSibling);
     }
 }
 

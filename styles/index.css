@@ -129,16 +129,10 @@ button:hover {
     opacity: 0;
 }
 
-aside img {
+img {
     margin: 0;
     padding: 0;
-    height: 100%;
-}
-
-aside {
     height: 100vh;
-    margin: 0 !important;
-    padding: 0 !important;
 }
 
 @media (min-width: 1250px) and (max-width: 1400px) {
@@ -156,13 +150,9 @@ aside {
 }
 
 @media (max-width: 800px) {
-    aside img {
+    img {
         height: auto;
         width: 100%;
-    }
-    aside {
-        height: auto;
-        width: 100vw;
     }
     #mainContainer {
         padding-left: 0;
