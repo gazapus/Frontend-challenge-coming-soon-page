@@ -31,6 +31,7 @@ function sendMail() {
     if(emailInput.value === "") {
         show(errorAlerts[0]);
         show(errorAlerts[1]);
+        hide(success_message);
     } else {
         emailInput.value = "";
         hide(errorAlerts[0]);
