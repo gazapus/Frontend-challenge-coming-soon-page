@@ -80,6 +80,10 @@ input:focus, label button:focus {
     outline: none;
 }
 
+input:invalid {
+    border-color: hsl(0, 93%, 68%);
+}
+
 button {
     border-radius: 20pt;
     border-style: solid;
@@ -110,6 +114,20 @@ button:hover {
     margin-left: 1vw;
     margin-top: 1vh;
     font-size: 0.9em;
+}
+
+#success_message {
+    color: hsl(123, 88%, 31%);
+    display: block;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    font-size: 1em;
+    transition: all;
+    transition-duration: 0.5s;
+}
+
+.hidden {
+    opacity: 0;
 }
 
 aside img {
@@ -185,7 +203,7 @@ aside {
         width: 75%;
     }
     button {
-        width: 50pt;
+        width: 53pt;
     }
     .error_icon {
         margin-left: -60pt;

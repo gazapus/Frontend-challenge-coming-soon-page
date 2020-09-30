@@ -39,10 +39,10 @@
           Hello fellow shoppers! We're currently building our new fashion store.
           Add your email below to stay up-to-date with announcements and our launch deals.
         </p>
-        <form>
+        <form action="#" onsubmit="enviarEmail(); return false">
           <label>
             <input type="email" placeholder="Email Address" />
-            <div id="error_icon" class="error_icon">
+            <div id="error_icon" class="error_icon error_flag hidden">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                 <g fill="none" fill-rule="evenodd">
                   <circle cx="12" cy="12" r="12" fill="#F96464" />
@@ -56,7 +56,8 @@
                 <path fill="none" stroke="#FFF" stroke-width="2" d="M1 1l8.836 8.836L1 18.671" /></svg>
             </button>
           </label>
-          <span id="error_message">Please provide a valid email</span>
+          <span id="error_message" class="hidden error_flag">Please provide a valid email</span>
+          <span id="success_message" class="hidden">Thanks for subscribing</span>
         </form>
       </section>
     </div>

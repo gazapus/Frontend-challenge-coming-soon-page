@@ -1,6 +1,8 @@
 var aside = document.getElementsByTagName("aside")[0];
 var container = document.getElementById("mainContainer");
 var main = document.getElementsByTagName("main")[0];
+var emailInput = document.getElementsByTagName("input")[0];
+let errorAlert = document.getElementsByClassName("error_flag");
 
 function ajustarImagen() {
     if (window.innerWidth < 800) {
@@ -19,4 +21,21 @@ window.onload = () => {
 
 window.onresize = () => {
     ajustarImagen();
+}
+
+emailInput.oninvalid = (e) => {
+    e.preventDefault();
+    errorAlert[0].classList.remove("hidden")
+    errorAlert[1].classList.remove("hidden")
+}
+
+emailInput.oninput = () => {
+    document.getElementById("success_message").classList.add("hidden")
+}
+
+function enviarEmail() {
+    emailInput.value = "";
+    errorAlert[0].classList.add("hidden");
+    errorAlert[1].classList.add("hidden");
+    document.getElementById("success_message").classList.remove("hidden")
 }
