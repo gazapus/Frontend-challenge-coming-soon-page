@@ -5,13 +5,13 @@ let success_message = document.getElementById("success_message");   // success m
 function positionImage() {
     var img = document.getElementsByTagName("img")[0];
     if (window.innerWidth < 800) {
-        var container = document.getElementById("mainContainer");
+        var container = document.getElementsByTagName("main")[0];
         img.setAttribute("src", "./images/hero-mobile.jpg");
         container.insertBefore(img, container.children[1]);
     } else {
-        var main = document.getElementsByTagName("main")[0];
+        var body = document.getElementsByTagName("body")[0];
         img.setAttribute("src", "./images/hero-desktop.jpg");
-        main.insertBefore(img, main.children[0].nextSibling);
+        body.insertBefore(img, body.children[0].nextSibling);
     }
 }
 

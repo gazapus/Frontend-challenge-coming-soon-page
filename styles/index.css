@@ -3,18 +3,14 @@ body {
     padding: 0%;
     width: 100%;
     overflow-x: hidden;
-}
-
-main {
-    margin: 0;
     display: flex;
-    width: 100%;
     background-color: #FFFDFD;
 }
 
-#mainContainer {
+main {
     padding-left: 15vw;
     padding-right: 15vw;
+   
 }
 
 header {
@@ -136,7 +132,7 @@ img {
 }
 
 @media (min-width: 1250px) and (max-width: 1400px) {
-    #mainContainer {
+    main {
         padding-left: 10vw;
         padding-right: 10vw;
     }
@@ -154,7 +150,7 @@ img {
         height: auto;
         width: 100%;
     }
-    #mainContainer {
+    main {
         padding-left: 0;
         padding-right: 0;
         display: flex;
